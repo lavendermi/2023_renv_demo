@@ -22,10 +22,8 @@ renv::restore()
 renv::restore(exclude = c("MASS", "Matrix"))
 
 # if that does not work you can try this:
-require(devtools)
-install_version("Matrix", version = "1.5-1", repos = "http://cran.us.r-project.org")
+# require(devtools)
+# install_version("Matrix", version = "1.5-1", repos = "http://cran.us.r-project.org")
 
-
-# Lastly, if you get a sandbox timeout message, you can run the following code
-# to turn off sandboxing:
-# options(renv.config.sandbox.enabled = FALSE)
+# or go to the cran archive, get the url for the version you want and cross your fingers.
+# install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.5-1.tar.gz", repos=NULL, type="source")
