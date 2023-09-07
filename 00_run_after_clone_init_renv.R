@@ -13,3 +13,14 @@ renv::status()
 # If we want to work in the same state as development run the following to make
 # sure we have the same packages as renv.lock file
 renv::restore()
+
+# Note that this is far from perfect!!! Some packages need to be compile and
+# that does not always work. You can try excluding the package from the restore
+# but... that does not always work because of dependencies between packages. Two
+# common problem packages are MASS ad Matrix. You can try this to see if it
+# works.
+renv::restore(exclude = c("MASS", "Matrix"))
+
+# if that does not work you can try this:
+require(devtools)
+install_version("Matrix", version = "1.5-1", repos = "http://cran.us.r-project.org")
