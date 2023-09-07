@@ -27,3 +27,9 @@ renv::restore(exclude = c("MASS", "Matrix"))
 
 # or go to the cran archive, get the url for the version you want and cross your fingers.
 # install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.5-1.tar.gz", repos=NULL, type="source")
+
+# If the above "things" don't work to resolve your package installation issues
+# you should try updating to the latest version of R and installing the gfortran
+# compiler (Mac) and / or RTools which is available from here: 
+# Mac - https://mac.r-project.org/tools/
+# Windows - https://cran.r-project.org/bin/windows/Rtools/
