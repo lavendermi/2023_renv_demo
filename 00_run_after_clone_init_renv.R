@@ -24,3 +24,8 @@ renv::restore(exclude = c("MASS", "Matrix"))
 # if that does not work you can try this:
 require(devtools)
 install_version("Matrix", version = "1.5-1", repos = "http://cran.us.r-project.org")
+
+
+# Lastly, if you get a sandbox timeout message, you can run the following code
+# to turn off sandboxing:
+# options(renv.config.sandbox.enabled = FALSE)
